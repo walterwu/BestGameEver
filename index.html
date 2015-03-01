@@ -2,23 +2,48 @@
 <html>
 <head>
 	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="bootstrap.css">
 </head>
 <body>
-	<div class = "container">
-		<form>
-		Product Name:<br>
-		<input type="text" name="Product Name">
+	<script src="myScript.js"></script>
+	<div class= "container">
+		<div class= "row">
+			<div class= "col-lg-4">
+				<div class="productIcon"><img src="images/smartphone.png"></div>
+				<h2> Product: SmartPhones </h2>
+				<h2> Assets: $100,000,000 </h2>
+			</div>
+			<div class= "col-lg-8">
+
+			</div>
+		</div>
+		<h1> ROUND 1 </h1>
+		<h1> Product Specs </h1>
 		<br>
-		Performance:<br>
-		<input type="text" name="Performance">
-		<br>
-		Size:<br>
-		<input type="text" name="Size">
-		<br>
-		MTBF:<br>
-		<input type="text" name="MTBF">
-		<br>
-		</form>
+		<div class= "row">
+			<h2> Product Name </h2>
+			<div class= "col-lg-3">
+				Price of Unit:<br>
+				<input type="text" id="price" name="Product Name">
+			</div>
+			<div class= "col-lg-3">
+				Cost per Unit:<br>
+				<input type="text" id="cost" name="Performance">
+			</div>
+			<div class= "col-lg-3">
+				Marketing Budget:<br>
+				<input type="text" id = "marketing" name="Size">
+			</div>
+			<div class= "col-lg-3">
+				Quantity Produced:<br>
+				<input type="text" id="quantity" name="MTBF">
+			</div>
+			<br>
+			<div class= "col-lg-3" id = "div1">
+				<input type="submit" value="Submit" onclick="myFunction()">
+			</div>
 	</div>
+
+
 </body>
 </html>

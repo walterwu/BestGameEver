@@ -1,5 +1,11 @@
-.container {
-	min-width: 0;
-	margin-left: 0;
-	margin-right: 0;
+.productIcon {
+	display: block;
+    margin-left: 20px;
+    margin-right: auto;
+    width: 256px;
+    margin-top: 20px;
+}
+#div1 {
+	padding-top: 20px;
+	padding-bottom: 20px;
 }
