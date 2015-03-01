@@ -4,6 +4,7 @@
 	<link rel="stylesheet" href="index.css">
 	<link rel="stylesheet" href="bootstrap.css">
 </head>
+<script type="text/javascript" src = "fieldScript.js"></script>
 <body>
 	<script src="myScript.js"></script>
 	<div class= "container">
@@ -11,37 +12,49 @@
 			<div class= "col-lg-4">
 				<div class="productIcon"><img src="images/smartphone.png"></div>
 				<h2> Product: SmartPhones </h2>
-				<h2> Budget: $200,000,000 </h2>
+				<h2> Assets: $100,000,000 </h2>
 			</div>
 			<div class= "col-lg-8">
 
 			</div>
 		</div>
-		<h1> ROUND 1 </h1>
-		<h1> Product Specs </h1>
-		<br>
-		<div class= "row">
-			<h2> Product Name </h2>
-			<div class= "col-lg-3">
-				Price of Unit:<br>
-				<input type="text" id="price" name="Product Name">
-			</div>
-			<div class= "col-lg-3">
-				Cost per Unit:<br>
-				<input type="text" id="cost" name="Performance">
-			</div>
-			<div class= "col-lg-3">
-				Marketing Budget:<br>
-				<input type="text" id = "marketing" name="Size">
-			</div>
-			<div class= "col-lg-3">
-				Quantity Produced:<br>
-				<input type="text" id="quantity" name="MTBF">
-			</div>
+			<h1> ROUND 1 </h1>
+			<h1> Product Specs </h1>
 			<br>
-			<div class= "col-lg-3" id = "div1">
-				<input type="submit" value="Submit" onclick="myFunction()">
+			<input type="button" value="Add Product" onclick="addProduct()">
+			<div id="temp-holder">
+			<div id= "product-item">
+				<div class= "row">
+					<div class= "col-lg-3">
+						<h3> Product Name </h3>
+					</div>
+				</div>
+				<div class= "row">
+					<div class= "col-lg-3">
+						Price of Unit:<br>
+						<input type="text" id="price" name="Product Name">
+					</div>
+					<div class= "col-lg-3">
+						Cost per Unit:<br>
+						<input type="text" id="cost" name="Performance">
+					</div>
+					<div class= "col-lg-3">
+						Marketing Budget:<br>
+						<input type="text" id = "marketing" name="Size">
+					</div>
+					<div class= "col-lg-3">
+						Quantity Produced:<br>
+						<input type="text" id="quantity" name="MTBF">
+					</div>
+					<br>
 			</div>
+			</div>
+		</div>
+		<div class= "row">
+			<div class= "col-lg-3" id = "div1">
+				<input type="button" value="Submit" onclick="myFunction()">
+			</div>
+		</div>
 	</div>
 
 
