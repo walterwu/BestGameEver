@@ -299,7 +299,7 @@ h1 small, h2 small, h3 small, h4 small, h5 small, h6 small, .h1 small, .h2 small
     color: #999;
 }
 h1, .h1, h2, .h2, h3, .h3 {
-    margin-top: 20px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 h1 small, .h1 small, h2 small, .h2 small, h3 small, .h3 small, h1 .small, .h1 .small, h2 .small, .h2 .small, h3 .small, .h3 .small {
@@ -1029,6 +1029,10 @@ pre code {
     margin-left: 8.33333333%}
 .col-lg-offset-0 {
     margin-left: 0;
+}
+.col-centered{
+    float: none;
+    margin: 0 auto;
 }
 }table {
     max-width: 100%;
