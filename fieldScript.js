@@ -9,13 +9,35 @@ function myFunction() {
     var marketing = document.getElementById("marketing").value;
     var quantity = document.getElementById("quantity").value;
     awareness = (marketing/1000000000) + awareness;
-    var sales = population * awareness * (price/(3*cost));
+    var accuracy;
+    if (price/cost > 3) {
+    	accuracy = 3/(price/cost);
+    }
+    else {
+    	accuracy = (price/cost)/3;
+    }
+    var sales = population * awareness * (price/(3*accuracy));
     if (quantity < sales) {
     	sales = quantity;
     }
     var profit = (sales * price) - (cost * quantity) - marketing;
-    assets += profit;
-    document.getElementById("assetValue").innerHTML = assets;
+    assets += profit;    
+    var formattedAssets = formatNumber(assets);
+    document.getElementById("assetValue").innerHTML = formattedAssets;
+}
+
+function formatNumber(numb)
+//Taken from Stack Overflow. Written by user455982
+{
+    var number = number.toFixed(2) + '';
+    var x = number.split('.');
+    var x1 = x[0];
+    var x2 = x.length > 1 ? '.' + x[1] : '';
+    var regx = /(\d+)(\d{3})/;
+    while (regx.test(x1)) {
+        x1 = x1.replace(rgx, '$1' + ',' + '$2');
+    }
+    return x1 + x2;
 }
 
 function addProduct() {
