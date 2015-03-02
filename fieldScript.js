@@ -10,8 +10,12 @@ function myFunction() {
     var quantity = document.getElementById("quantity").value;
     awareness = (marketing/1000000000) + awareness;
     var sales = population * awareness * (price/(5*cost));
+    if (quantity < sales) {
+    	sales = quantity;
+    }
     var profit = (sales * price) - (cost * quantity) - marketing;
     assets += profit;
+    document.getElementById("assetValue").innerHTML = assets;
 }
 
 function addProduct() {
