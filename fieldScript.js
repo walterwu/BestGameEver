@@ -10,7 +10,6 @@ function myFunction() {
     var marketing = document.getElementById("marketing").value;
     var quantity = document.getElementById("quantity").value;
     awareness = (marketing/1000000000) + awareness;
-
     var new_url = "http://127.0.0.1:3000/" + id + "?price=" + price.toString() + "&cost=" + cost.toString() + "&marketing=" + marketing.toString() + "&quantity=" + quantity.toString();
     alert(new_url);
     document.getElementById("direct").href=new_url;
@@ -29,6 +28,7 @@ function updateAsset() {
     		document.getElementById('asset').innerHTML = "$" + data['asset'];
     	}
 	});
+
 }
 
 function addProduct() {
