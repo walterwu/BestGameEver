@@ -41,6 +41,7 @@ app.get('/bank/:id', function (req, res) {
 
 // 127.0.0.1:3000/1?price=1&cost=1&marketing=1&quantity=1
 app.get('/:id', function (req, res) {
+	console.log("new");
 	var id = req.param("id");
 	var price = req.param("price");
 	var cost = req.param("cost");
