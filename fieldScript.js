@@ -2,14 +2,16 @@ var awareness = .01;
 var population = 100000;
 var assets = 100000000;
 function myFunction() {
+	var id = "1";
     var price = document.getElementById("price").value;
     var cost = document.getElementById("cost").value;
     var marketing = document.getElementById("marketing").value;
     var quantity = document.getElementById("quantity").value;
     awareness = (marketing/1000000000) + awareness;
-    var sales = population * awareness * (price/(5*cost));
-    var profit = (sales * price) - (cost * quantity) - marketing;
-    assets += profit;
+
+    var new_url = "http://localhost:3000/" + id + "?price=" + price.toString() + "cost=" + cost.toString() + "marketing=" + marketing.toString() + "quantity=" + quantity.toString();
+    alert(new_url);
+    document.getElementById("direct").href=new_url;
 }
 
 function addProduct() {
