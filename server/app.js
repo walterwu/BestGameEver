@@ -29,13 +29,14 @@ p2.save(function (err) {if (err) console.log ('Error on save!')});
 // 127.0.0.1:3000/bank/1
 app.get('/bank/:id', function (req, res) {
 	var id = req.param("id");
+	console.log("GOT BANK!");
 	if (id == 1)
 	{
-		res.send(p1.bank.toString());
+		res.jsonp({ asset: p1.bank});
 	}
 	else
 	{
-		res.send(p2.bank.toString());
+		res.jsonp({ asset: p2.bank});
 	}
 });
 
@@ -60,6 +61,12 @@ app.get('/:id', function (req, res) {
 		person = p2;
 		enemy = p1;
 	}
+
+	console.log(price);
+	console.log(cost);
+	console.log(marketing);
+	console.log(quantity);
+
 
 	person.bank = person.bank;
 	person.price = price;

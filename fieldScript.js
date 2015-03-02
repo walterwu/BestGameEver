@@ -4,16 +4,31 @@ var assets = 100000000;
 var maxProducts = 5;
 var currProducts = 1;
 function myFunction() {
-	var id = "1";
+	var id = document.getElementById("playerId").value;
     var price = document.getElementById("price").value;
     var cost = document.getElementById("cost").value;
     var marketing = document.getElementById("marketing").value;
     var quantity = document.getElementById("quantity").value;
     awareness = (marketing/1000000000) + awareness;
 
-    var new_url = "http://localhost:3000/" + id + "?price=" + price.toString() + "cost=" + cost.toString() + "marketing=" + marketing.toString() + "quantity=" + quantity.toString();
+    var new_url = "http://127.0.0.1:3000/" + id + "?price=" + price.toString() + "&cost=" + cost.toString() + "&marketing=" + marketing.toString() + "&quantity=" + quantity.toString();
     alert(new_url);
     document.getElementById("direct").href=new_url;
+}
+
+function updateAsset() {
+	var the_url = "http://127.0.0.1:3000/bank/" + document.getElementById("playerId").value;
+
+	$.ajax({
+    	crossDomain:true,
+    	type: "GET",
+    	dataType:'jsonp',
+    	url: the_url,
+    	success: function(data){
+    		console.log("$" + data['asset']);
+    		document.getElementById('asset').innerHTML = "$" + data['asset'];
+    	}
+	});
 }
 
 function addProduct() {
