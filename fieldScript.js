@@ -9,7 +9,7 @@ function myFunction() {
     var marketing = document.getElementById("marketing").value;
     var quantity = document.getElementById("quantity").value;
     awareness = (marketing/1000000000) + awareness;
-    var sales = population * awareness * (price/(5*cost));
+    var sales = population * awareness * (price/(3*cost));
     if (quantity < sales) {
     	sales = quantity;
     }
