@@ -15,6 +15,8 @@ function myFunction() {
     }
     var profit = (sales * price) - (cost * quantity) - marketing;
     assets += profit;
+    var tempAssets = (int) assets;
+    var formattedAssets = "";
     document.getElementById("assetValue").innerHTML = assets;
 }
 
